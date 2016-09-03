@@ -132,7 +132,7 @@ public class ChatManager extends FreedomService
                 if (acr == true)
                 {
                     cc = FUtil.randomChatColor();
-                    player.sendMessage("[" + ChatColor.AQUA + "ADMIN" + ChatColor.WHITE + "] " + ChatColor.DARK_RED + name + ": " + cc + message);
+                    player.sendMessage(ChatColor.GRAY + "[" + ChatColor.RED + "ADMINCHAT" + ChatColor.GRAY + "] " + ChatColor.BLUE + name + ChatColor.DARK_GRAY + ": " + cc + message);
                 }
                 else if (acn == true)
                 {
@@ -142,11 +142,11 @@ public class ChatManager extends FreedomService
                         ChatColor rc = FUtil.randomChatColor();
                         rm = rm + rc + c;
                     }
-                    player.sendMessage("[" + ChatColor.AQUA + "ADMIN" + ChatColor.WHITE + "] " + ChatColor.DARK_RED + name + ": " + rm);
+                    player.sendMessage(ChatColor.GRAY + "[" + ChatColor.RED + "ADMINCHAT" + ChatColor.GRAY + "] " + ChatColor.BLUE + name + ChatColor.DARK_GRAY + ": " + rm);
                 }
                 else
                 {
-                    player.sendMessage("[" + ChatColor.AQUA + "ADMIN" + ChatColor.WHITE + "] " + ChatColor.DARK_RED + name + ": " + cc + message);
+                    player.sendMessage(ChatColor.GRAY + "[" + ChatColor.RED + "ADMINCHAT" + ChatColor.GRAY + "] " + ChatColor.BLUE + name + ChatColor.DARK_GRAY + ": " + cc + message);
                 }
          
             }
@@ -159,7 +159,7 @@ public class ChatManager extends FreedomService
         {
             if (plugin.al.isAdmin(player))
             {
-                playerMsg(player, ChatColor.RED + "[REPORTS] " + ChatColor.GOLD + reporter.getName() + " has reported " + reported.getName() + " for " + report);
+                playerMsg(player, ChatColor.RED + "[Report Alert] " + ChatColor.GRAY + reporter.getName() + " has reported " + reported.getName() + " for " + report);
             }
         }
     }
